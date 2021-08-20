@@ -1,1 +1,105 @@
+body{
+  background:#44454C;
+}
 
+
+.menu {
+  width: 2em;
+  height: 8px;
+  position: absolute;
+  top: 10%;
+  left: 90%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.menu .btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  /*background: rgba(255, 255, 255, 0.15);*/
+  opacity: 0;
+  z-index: -10;
+  cursor: pointer;
+  transition: opacity 1s, z-index 0.3s, transform 1s;
+  transform: translateX(0);
+}
+
+
+.menu .trigger {
+  opacity: 1;
+  z-index: 100;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.menu .trigger:hover {
+  transform: scale(1.2);
+
+}
+
+.menu .rotater {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  transform-origin: 20% 20%;
+}
+
+.menu.active .btn-icon {
+  opacity: 1;
+  z-index: 50;
+}
+
+ion-icon {
+  font-size: 20px;
+  color: yellow;
+}
+
+
+ion-icon:hover {
+  opacity: 0.2;
+
+}
+
+/*for menu icons*/
+/*its for home icon*/
+
+.rotater:nth-child(2) {
+  transform: rotate(90deg);
+}
+
+.menu.active .rotater:nth-child(2) .btn-icon {
+  transform: translateY(16em) rotate(-90deg);
+}
+
+/* for gallery icon*/
+.rotater:nth-child(3) {
+  transform: rotate(90deg);
+}
+
+.menu.active .rotater:nth-child(3) .btn-icon {
+  transform: translateY(12em) rotate(-90deg);
+}
+
+/*for user icon*/
+.rotater:nth-child(4) {
+  transform: rotate(90deg);
+}
+
+.menu.active .rotater:nth-child(4) .btn-icon {
+  transform: translateY(8em) rotate(-90deg);
+}
+
+/*for call icon*/
+
+.rotater:nth-child(5) {
+  transform: rotate(90deg);
+}
+
+.menu.active .rotater:nth-child(5) .btn-icon {
+  transform: translateY(4em) rotate(-90deg);
+} 
